@@ -1,23 +1,31 @@
-# SFAB dev fixtures
+# Meridian Atlas
 
-Public fixture repository for local SFAB platform development.
+Public fixture repository for **Atlas Console** local development at Meridian Labs.
 
-## Purpose
+This repo simulates a customer monorepo linked to the SFAB platform. Pull requests here are synced into local D1 during `pnpm dev:reset:local` so engineers can test PR lists, large diffs, and review UI against real GitHub data.
 
-- Stable pull requests with real diffs for PR list/detail UI testing
-- Branch names match seeded task display IDs (`dev-4-…` → **DEV-4** in the dev org)
-- Used by `pnpm dev:reset:local` when `DEV_SEED_INSTALLATION_ID` is set in `.dev.seed.vars`
+## Structure
 
-## Pull requests
+```text
+apps/console/          Web client (fixture stubs)
+packages/ui/           Shared table and docs components
+.github/workflows/     CI
+```
 
-| Branch | Task | State |
-|--------|------|-------|
-| `dev-4-polish-task-list-ui` | DEV-4 | open |
-| `dev-5-document-file-tree` | DEV-5 | open |
-| `dev-11-restore-staging-deploy` | DEV-11 | open |
-| `dev-8-onboarding-copy` | DEV-8 | merged |
-| `experiment/graphql-api` | — | closed |
+## Pull requests (seed sync)
+
+| Branch | Task | Typical size |
+| --- | --- | --- |
+| `meridian-4-task-table-refactor` | MERIDIAN-4 | ~70 files, ~3k+ lines |
+| `meridian-5-docs-sidebar-tree` | MERIDIAN-5 | ~20 files |
+| `meridian-11-fix-staging-deploy` | MERIDIAN-11 | CI hotfix |
+| `meridian-8-onboarding-copy` | MERIDIAN-8 | merged |
+| `experiment/graphql-api-spike` | — | closed experiment |
+
+Branch names use the seeded org slug (`meridian`) so tasks auto-link in the platform.
 
 ## Onboarding
 
-Install the **sfab-dev** GitHub App on this repo, then set `DEV_SEED_INSTALLATION_ID` in `apps/platform/.dev.seed.vars`.
+1. Install the **sfab-dev** GitHub App on this repository (or the `sfab-oss` org).
+2. Set `DEV_SEED_INSTALLATION_ID` in `apps/platform/.dev.seed.vars`.
+3. Run `pnpm dev:reset:local` from the SFAB monorepo.
