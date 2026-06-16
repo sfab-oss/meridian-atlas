@@ -29,3 +29,5 @@ Branch names use the seeded org slug (`meridian`) so tasks auto-link in the plat
 1. Install the **sfab-dev** GitHub App on this repository (or the `sfab-oss` org).
 2. Set `DEV_SEED_INSTALLATION_ID` in `apps/platform/.dev.seed.vars`.
 3. Run `pnpm dev:reset:local` from the SFAB monorepo.
+
+- ADR-0014 engine e2e smoke (ALW-238).
