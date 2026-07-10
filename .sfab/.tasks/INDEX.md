@@ -7,19 +7,19 @@ overwritten by the next sync.
 
 - [`MERIDIAN-1`](./MERIDIAN-1.md) — Wire SSO for enterprise customers
 
-## ready (2)
+## ready (3)
 
 - [`MERIDIAN-12`](./MERIDIAN-12.md) — Write MCP integration guide for contractors
+- [`MERIDIAN-4`](./MERIDIAN-4.md) — Refactor task table virtualization and filters
 - [`MERIDIAN-2`](./MERIDIAN-2.md) — Add usage metrics to the dashboard
 
 ## assigned (1)
 
 - [`MERIDIAN-3`](./MERIDIAN-3.md) — Real-time dashboard widgets
 
-## working (2)
+## working (1)
 
 - [`MERIDIAN-11`](./MERIDIAN-11.md) — Incident: restore staging deploy pipeline
-- [`MERIDIAN-4`](./MERIDIAN-4.md) — Refactor task table virtualization and filters
 
 ## review (1)
 
